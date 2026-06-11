@@ -1,0 +1,1155 @@
+# This blueprints file specifies the assembly design information
+# for the MET-1000 at hot temperature conditions. The inputs for this
+# model are based on "Bencharks for Uncertainty Analysis in Modelling (UAM)
+# for Design, Operation, and Safety Analysis of SFRs" (see Section 3 of the report). 
+# The geometry inputs for this model assume end of equilibrium cycle, where 
+# fuel burnup expansion has occurred and the bond sodium within the fuel
+# has been push out of the active core region. Note that in this model, the 
+# wire-wraps are smeared into the cladding rather than into the sodium 
+# coolant so the wire-wrap is not explicitly modeled.
+nuclide flags:
+  U234:
+    burn: true
+    xs: true
+    expandTo:
+  U235:
+    burn: true
+    xs: true
+    expandTo:
+  U236:
+    burn: true
+    xs: true
+    expandTo:
+  U238:
+    burn: true
+    xs: true
+    expandTo:
+  NP237:
+    burn: true
+    xs: true
+    expandTo:
+  NP238:
+    burn: true
+    xs: true
+    expandTo:
+  PU236:
+    burn: true
+    xs: true
+    expandTo:
+  PU238:
+    burn: true
+    xs: true
+    expandTo:
+  PU239:
+    burn: true
+    xs: true
+    expandTo:
+  PU240:
+    burn: true
+    xs: true
+    expandTo:
+  PU241:
+    burn: true
+    xs: true
+    expandTo:
+  PU242:
+    burn: true
+    xs: true
+    expandTo:
+  AM241:
+    burn: true
+    xs: true
+    expandTo:
+  AM242M:
+    burn: true
+    xs: true
+    expandTo:
+  AM243:
+    burn: true
+    xs: true
+    expandTo:
+  CM242:
+    burn: true
+    xs: true
+    expandTo:
+  CM243:
+    burn: true
+    xs: true
+    expandTo:
+  CM244:
+    burn: true
+    xs: true
+    expandTo:
+  CM245:
+    burn: true
+    xs: true
+    expandTo:
+  CM246:
+    burn: true
+    xs: true
+    expandTo:
+  CM247:
+    burn: true
+    xs: true
+    expandTo:
+  LFP35:
+    burn: true
+    xs: true
+    expandTo:
+  LFP38:
+    burn: true
+    xs: true
+    expandTo:
+  LFP39:
+    burn: true
+    xs: true
+    expandTo:
+  LFP40:
+    burn: true
+    xs: true
+    expandTo:
+  LFP41:
+    burn: true
+    xs: true
+    expandTo:
+  DUMP1:
+    burn: true
+    xs: true
+    expandTo:
+  DUMP2:
+    burn: true
+    xs: true
+    expandTo:
+  B10:
+    burn: true
+    xs: true
+    expandTo:
+  B11:
+    burn: true
+    xs: true
+    expandTo:
+  ZR:
+    burn: false
+    xs: true
+    expandTo:
+  C:
+    burn: false
+    xs: true
+    expandTo:
+  SI:
+    burn: false
+    xs: true
+    expandTo:
+  V:
+    burn: false
+    xs: true
+    expandTo:
+  CR:
+    burn: false
+    xs: true
+    expandTo:
+  MN:
+    burn: false
+    xs: true
+    expandTo:
+  FE:
+    burn: false
+    xs: true
+    expandTo:
+  NI:
+    burn: false
+    xs: true
+    expandTo:
+  MO:
+    burn: false
+    xs: true
+    expandTo:
+  W:
+    burn: false
+    xs: true
+    expandTo:
+  NA:
+    burn: false
+    xs: true
+    expandTo:
+  HE:
+    burn: false
+    xs: true
+    expandTo:
+  PA233:
+    burn: true
+    xs: true
+    expandTo:
+  PA231:
+    burn: true
+    xs: true
+    expandTo:
+  U233:
+    burn: true
+    xs: true
+    expandTo:
+  U232:
+    burn: true
+    xs: true
+    expandTo:
+  B:
+    burn: true
+    xs: true
+    expandTo:
+    - B10
+    - B11
+  O16:
+    burn: false
+    xs: true
+    expandTo:
+  TI:
+    burn: false
+    xs: true
+    expandTo:
+  S:
+    burn: false
+    xs: true
+    expandTo:
+  TH232:
+    burn: true
+    xs: true
+    expandTo:
+  N14:
+    burn: false
+    xs: true
+    expandTo:
+  P31:
+    burn: false
+    xs: true
+    expandTo:
+  P:
+    burn: false
+    xs: true
+    expandTo:
+  TA181:
+    burn: false
+    xs: true
+    expandTo:
+  AL27:
+    burn: false
+    xs: true
+    expandTo:
+  NB93:
+    burn: false
+    xs: true
+    expandTo:
+  CU:
+    burn: false
+    xs: true
+    expandTo:
+  CO59:
+    burn: false
+    xs: true
+    expandTo:
+  AS75:
+    burn: false
+    xs: true
+    expandTo:
+  O:
+    burn: false
+    xs: true
+    expandTo:
+  NB:
+    burn: false
+    xs: true
+    expandTo:
+  EU:
+    burn: false
+    xs: true
+    expandTo:
+  Y:
+    burn: false
+    xs: true
+    expandTo:
+  H:
+    burn: false
+    xs: true
+    expandTo:
+  RE:
+    burn: false
+    xs: true
+    expandTo:
+  LI6:
+    burn: false
+    xs: true
+    expandTo:
+  LI7:
+    burn: false
+    xs: true
+    expandTo:
+  N:
+    burn: false
+    xs: true
+    expandTo:
+  NP239:
+    burn: true
+    xs: true
+    expandTo:
+custom isotopics:
+    Fuel:
+        input format: mass fractions
+        density: 16.0
+        U235:   3.75449E-04
+        U238:   7.60125E-01
+        NP237:  6.51048E-03
+        PU238:  3.01966E-03
+        PU239:  6.58500E-02
+        PU240:  3.18756E-02
+        PU241:  1.18104E-02
+        PU242:  9.63411E-03
+        AM241:  7.86895E-03
+        AM242M: 1.40850E-05
+        AM243:  2.20635E-03
+        CM244:  6.53272E-04
+        CM245:  5.70396E-05
+        ZR:     1.0E-01
+blocks:
+# Fuel Blocks - References
+#   - Table 12: Parameters for Driver Subassembly of ABR Metallic Core
+#   - Table 16: Volume Fractions of ABR Metallic Core (%)
+    lower structure: &block_lower_structure
+        flags: grid plate
+        grid plate:
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 0.0
+            mult: 1.0
+            # The outer pitch is set to main a 30% SS316 to
+            # 70% Sodium volume fraction in the lower
+            # structure region.
+            op: 8.6622
+        intercoolant:
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 15.710
+            mult: 1.0
+            op: 16.142
+        coolant:
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+    lower fuel reflector: &block_lower_fuel_reflector
+        flags: lower reflector
+        clad:
+            shape: Circle
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.6430
+            od: 0.755
+            mult: 271
+        reflector slug:
+            shape: Circle
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        duct:
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 14.922
+            op: 15.710
+            mult: 1.0
+        intercoolant:
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: duct.op
+            op: 16.142
+            mult: 1.0
+        coolant:
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+    inner fuel a: &block_inner_fuel_burnup_region_1
+        clad: &component_fuel_clad
+            shape: Circle
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.6430
+            od: 0.755
+            mult: 271
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: &component_fuel_wire
+            shape: Helix
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.0
+            helixDiameter: 0.88574
+            od: 0.13074
+            mult: 217
+            axialPitch: 15.0
+        duct: &component_fuel_duct
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 14.922
+            op: 15.710
+            mult: 1.0
+        intercoolant: &component_fuel_intercoolant
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: duct.op
+            op: 16.142
+            mult: 1.0
+        coolant: &component_fuel_coolant
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+    inner fuel b: &block_inner_fuel_burnup_region_2
+        clad: *component_fuel_clad
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: *component_fuel_wire
+        duct: *component_fuel_duct
+        intercoolant: *component_fuel_intercoolant
+        coolant: *component_fuel_coolant
+    inner fuel c: &block_inner_fuel_burnup_region_3
+        clad: *component_fuel_clad
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: *component_fuel_wire
+        duct: *component_fuel_duct
+        intercoolant: *component_fuel_intercoolant
+        coolant: *component_fuel_coolant
+    inner fuel d: &block_inner_fuel_burnup_region_4
+        clad: *component_fuel_clad
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: *component_fuel_wire
+        duct: *component_fuel_duct
+        intercoolant: *component_fuel_intercoolant
+        coolant: *component_fuel_coolant
+    inner fuel e: &block_inner_fuel_burnup_region_5
+        clad: *component_fuel_clad
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: *component_fuel_wire
+        duct: *component_fuel_duct
+        intercoolant: *component_fuel_intercoolant
+        coolant: *component_fuel_coolant
+    outer fuel a: &block_outer_fuel_burnup_region_1
+        clad: *component_fuel_clad
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: *component_fuel_wire
+        duct: *component_fuel_duct
+        intercoolant: *component_fuel_intercoolant
+        coolant: *component_fuel_coolant
+    outer fuel b: &block_outer_fuel_burnup_region_2
+        clad: *component_fuel_clad
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: *component_fuel_wire
+        duct: *component_fuel_duct
+        intercoolant: *component_fuel_intercoolant
+        coolant: *component_fuel_coolant
+    outer fuel c: &block_outer_fuel_burnup_region_3
+        clad: *component_fuel_clad
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: *component_fuel_wire
+        duct: *component_fuel_duct
+        intercoolant: *component_fuel_intercoolant
+        coolant: *component_fuel_coolant
+    outer fuel d: &block_outer_fuel_burnup_region_4
+        clad: *component_fuel_clad
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: *component_fuel_wire
+        duct: *component_fuel_duct
+        intercoolant: *component_fuel_intercoolant
+        coolant: *component_fuel_coolant
+    outer fuel e: &block_outer_fuel_burnup_region_5
+        clad: *component_fuel_clad
+        fuel:
+            shape: Circle
+            material: Custom
+            isotopics: Fuel
+            Tinput: 534.0
+            Thot: 534.0
+            id: 0.0
+            mult: clad.mult
+            od: 0.55685
+        wire: *component_fuel_wire
+        duct: *component_fuel_duct
+        intercoolant: *component_fuel_intercoolant
+        coolant: *component_fuel_coolant
+    fuel sodium plenum: &block_fuel_sodium_plenum
+        flags: plenum a
+        clad: &component_fuel_plenum_clad
+            shape: Circle
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.6430
+            od: 0.755
+            mult: 271
+        bond:
+            shape: Circle
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.0
+            od: clad.id
+            mult: clad.mult
+        wire: &component_fuel_plenum_wire
+            shape: Helix
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.0
+            helixDiameter: 0.88574
+            od: 0.13074
+            mult: 217
+            axialPitch: 15.0
+        duct: &component_fuel_plenum_duct
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 14.922
+            op: 15.710
+            mult: 1.0
+        intercoolant: &component_fuel_plenum_intercoolant
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: duct.op
+            mult: 1.0
+            op: 16.142
+        coolant: &component_fuel_plenum_coolant
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+    fuel plenum: &block_fuel_plenum
+        flags: plenum b
+        clad: *component_fuel_plenum_clad
+        gap:
+            shape: Circle
+            material: Void
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.0
+            od: clad.id
+            mult: clad.mult
+        wire: *component_fuel_plenum_wire
+        duct: *component_fuel_plenum_duct
+        intercoolant: *component_fuel_plenum_intercoolant
+        coolant: *component_fuel_plenum_coolant
+    upper structure: &block_upper_structure
+        structure:
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 0.0
+            mult: 1.0
+            # The outer pitch is set to main a 35.34% HT9 to
+            # 64.66% Sodium volume fraction in the lower
+            # structure region.
+            op: 9.4000
+        intercoolant:
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 15.710
+            mult: 1.0
+            op: 16.142
+        coolant:
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+# Radial Reflector Blocks - References
+#   - Table 13: Parameters for Radial Reflector Subassembly of ABR Metallic Core
+#   - Table 16: Volume Fractions of ABR Metallic Core (%)
+    lower reflector: &block_lower_reflector
+        structure:
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 0.0
+            mult: 1.0
+            # The outer pitch is set to main a 35.34% HT9 to
+            # 64.66% Sodium volume fraction in the lower
+            # reflector region.
+            op: 9.4000
+        intercoolant:
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 15.710
+            mult: 1.0
+            op: 16.142
+        coolant:
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+    radial reflector: &block_radial_reflector
+        slug:
+            shape: Circle
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.0
+            od: 1.541
+            mult: 91
+        duct:
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 14.922
+            op: 15.710
+            mult: 1.0
+        intercoolant:
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: duct.op
+            op: 16.142
+            mult: 1.0
+        coolant:
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+# Radial Shield Blocks - References
+#   - Table 14: Parameters for Shielding Subassembly of ABR Metallic Core
+#   - Table 16: Volume Fractions of ABR Metallic Core (%)
+    radial shield: &block_radial_shield
+        clad:
+            shape: Circle
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            id: 3.087
+            od: 3.337
+            mult: 19
+        shield:
+            shape: Circle
+            material: B4C
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.0
+            od: 2.553
+            mult: clad.mult
+        bond:
+            shape: Circle
+            material: Void # He
+            Tinput: 432.5
+            Thot: 432.5
+            id: shield.od
+            od: clad.id
+            mult: clad.mult
+        duct:
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 14.922
+            op: 15.710
+            mult: 1.0
+        intercoolant:
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: duct.op
+            op: 16.142
+            mult: 1.0
+        coolant:
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+# Control Blocks - References
+#   - Table 15: Parameters for Control Assembly of ABR Metallic Core
+#   - Table 16: Volume Fractions of ABR Metallic Core (%)
+    control: &block_control
+        flags: MOVEABLE CONTROL
+        clad:
+            shape: Circle
+            material: B4C
+            Tinput: 432.5
+            Thot: 432.5
+            id: 4.618
+            od: 4.688
+            mult: 7
+        control:
+            shape: Circle
+            material: B4C
+            Tinput: 432.5
+            Thot: 432.5
+            id: 0.0
+            od: 4.193
+            mult: clad.mult
+        bond:
+            shape: Circle
+            material: Void # He
+            Tinput: 432.5
+            Thot: 432.5
+            id: control.od
+            od: clad.id
+            mult: clad.mult
+        duct:
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 14.922
+            op: 15.710
+            mult: 1.0
+        intercoolant:
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: duct.op
+            op: 16.142
+            mult: 1.0
+        coolant:
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+    duct: &block_duct
+        duct:
+            shape: Hexagon
+            material: HT9
+            Tinput: 432.5
+            Thot: 432.5
+            ip: 14.922
+            op: 15.710
+            mult: 1.0
+        intercoolant:
+            shape: Hexagon
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+            ip: duct.op
+            op: 16.142
+            mult: 1.0
+        coolant:
+            shape: DerivedShape
+            material: Sodium
+            Tinput: 432.5
+            Thot: 432.5
+assemblies:
+    inner fuel:
+        specifier: IF
+        blocks:
+            - *block_lower_structure
+            - *block_lower_fuel_reflector
+            - *block_inner_fuel_burnup_region_1
+            - *block_inner_fuel_burnup_region_1
+            - *block_inner_fuel_burnup_region_2
+            - *block_inner_fuel_burnup_region_2
+            - *block_inner_fuel_burnup_region_3
+            - *block_inner_fuel_burnup_region_3
+            - *block_inner_fuel_burnup_region_4
+            - *block_inner_fuel_burnup_region_4
+            - *block_inner_fuel_burnup_region_5
+            - *block_inner_fuel_burnup_region_5
+            - *block_fuel_sodium_plenum
+            - *block_fuel_plenum
+            - *block_upper_structure
+        height: &fuel_heights
+            - 35.56
+            - 124.46
+            - 8.128
+            - 8.128
+            - 8.128
+            - 8.128
+            - 8.128
+            - 8.128
+            - 8.128
+            - 8.128
+            - 8.128
+            - 8.128
+            - 5.0
+            - 122.0
+            - 109.22
+        axial mesh points: &fuel_axial_mesh_points
+            - 3
+            - 12
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 2
+            - 10
+            - 11
+        xs types: &fuel_xs_types
+            - A
+            - B
+            - C
+            - C
+            - C
+            - C
+            - C
+            - C
+            - C
+            - C
+            - C
+            - C
+            - D
+            - E
+            - F
+    outer fuel:
+        specifier: OF
+        blocks:
+            - *block_lower_structure
+            - *block_lower_fuel_reflector
+            - *block_outer_fuel_burnup_region_1
+            - *block_outer_fuel_burnup_region_1
+            - *block_outer_fuel_burnup_region_2
+            - *block_outer_fuel_burnup_region_2
+            - *block_outer_fuel_burnup_region_3
+            - *block_outer_fuel_burnup_region_3
+            - *block_outer_fuel_burnup_region_4
+            - *block_outer_fuel_burnup_region_4
+            - *block_outer_fuel_burnup_region_5
+            - *block_outer_fuel_burnup_region_5
+            - *block_fuel_sodium_plenum
+            - *block_fuel_plenum
+            - *block_upper_structure
+        height: *fuel_heights
+        axial mesh points: *fuel_axial_mesh_points
+        xs types: *fuel_xs_types
+    radial reflector:
+        specifier: RR
+        blocks:
+            - *block_lower_structure
+            - *block_lower_reflector
+            - *block_radial_reflector
+            - *block_upper_structure
+        height:
+            - 35.56
+            - 124.46
+            - 208.28
+            - 109.22
+        axial mesh points:
+            - 3
+            - 12
+            - 20
+            - 11
+        xs types: 
+            - A
+            - G
+            - H
+            - F
+    radial shield:
+        specifier: SH
+        blocks:
+            - *block_lower_structure
+            - *block_lower_reflector
+            - *block_radial_shield
+            - *block_upper_structure
+        height:
+            - 35.56
+            - 124.46
+            - 205.74
+            - 109.22
+        axial mesh points:
+            - 3
+            - 12
+            - 20
+            - 11
+        material modifications: 
+            B10_wt_frac:
+                - ''
+                - ''
+                - 0.184
+                - ''
+            TD_frac:
+                - ''
+                - ''
+                - 0.81
+                - ''
+        xs types: 
+            - A
+            - G
+            - I
+            - F
+    primary control:
+        specifier: PC
+        blocks: &primary_control_blocks
+            - *block_lower_structure
+            - *block_lower_reflector
+            - *block_duct
+            - *block_control
+            - *block_control
+            - *block_control
+            - *block_control
+            - *block_control
+            - *block_control
+            - *block_control
+            - *block_control
+            - *block_duct
+        height: &primary_control_heights
+            - 35.56
+            - 124.46
+            - 235.82
+            - 10.84375
+            - 10.84375
+            - 10.84375
+            - 10.84375
+            - 10.84375
+            - 10.84375
+            - 10.84375
+            - 10.84375
+            - 2.01
+        axial mesh points: &primary_control_axial_mesh_points
+            - 3
+            - 12
+            - 8
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 1
+            - 15
+        material modifications: 
+            B10_wt_frac:
+                - ''
+                - ''
+                - ''
+                - 0.184
+                - 0.184
+                - 0.184
+                - 0.184
+                - 0.184
+                - 0.184
+                - 0.184
+                - 0.184
+                - ''
+            TD_frac:
+                - ''
+                - ''
+                - ''
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - ''
+        xs types:
+            - A
+            - G
+            - J
+            - K
+            - K
+            - K
+            - K
+            - K
+            - K
+            - K
+            - K
+            - J 
+    secondary control:
+        specifier: SC
+        blocks: *primary_control_blocks
+        height: *primary_control_heights
+        axial mesh points: *primary_control_axial_mesh_points
+        material modifications: 
+            B10_wt_frac:
+                - ''
+                - ''
+                - ''
+                - 0.62812
+                - 0.62812
+                - 0.62812
+                - 0.62812
+                - 0.62812
+                - 0.62812
+                - 0.62812
+                - 0.62812
+                - ''
+            TD_frac:
+                - ''
+                - ''
+                - ''
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - 0.85
+                - ''
+        xs types:
+            - A
+            - G
+            - J
+            - L
+            - L
+            - L
+            - L
+            - L
+            - L
+            - L
+            - L
+            - J 
+systems:
+    core:
+      grid name: core
+      origin:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+grids:
+    core:
+      geom: hex
+      lattice map: |
+        -   -   -   -   SH  SH  SH
+          -   -   -   -   SH  SH  SH  SH
+        -   -   -   SH  RR  RR  RR  SH
+          -   -   -   SH  RR  RR  RR  RR  SH
+        -   -   SH  RR  RR  RR  RR  RR  SH
+          -   -   SH  RR  RR  RR  RR  RR  RR  SH
+        -   SH  RR  RR  OF  OF  OF  RR  RR  SH
+          -   SH  RR  RR  OF  OF  OF  OF  RR  RR  SH
+        -   RR  RR  OF  OF  PC  OF  OF  RR  RR
+          -   SH  RR  OF  OF  OF  OF  OF  OF  RR  SH
+        SH  RR  OF  OF  OF  OF  OF  OF  OF  RR  SH
+          -   RR  RR  OF  PC  IF  IF  PC  OF  RR  RR
+        SH  RR  OF  OF  IF  IF  IF  OF  OF  RR  SH
+          SH  RR  OF  OF  IF  IF  IF  IF  OF  OF  RR  SH
+        RR  RR  PC  IF  IF  PC  IF  IF  PC  RR  RR
+          SH  RR  OF  OF  IF  IF  IF  IF  OF  OF  RR  SH
+        RR  OF  OF  IF  IF  IF  IF  IF  OF  OF  RR
+          SH  RR  OF  IF  SC  IF  IF  SC  IF  OF  RR  SH
+        RR  OF  OF  IF  IF  IF  IF  IF  OF  OF  RR
+          SH  RR  OF  IF  IF  IF  IF  IF  IF  OF  RR  SH
+        RR  OF  PC  IF  IF  SC  IF  IF  PC  OF  RR
+          SH  RR  OF  IF  IF  IF  IF  IF  IF  OF  RR  SH
+        RR  OF  OF  IF  IF  IF  IF  IF  OF  OF  RR
+          SH  RR  OF  IF  PC  IF  IF  PC  IF  OF  RR  SH
+        RR  OF  OF  IF  IF  IF  IF  IF  OF  OF  RR
+          SH  RR  OF  OF  IF  IF  IF  IF  OF  OF  RR  SH
+        RR  RR  PC  IF  IF  SC  IF  IF  PC  RR  RR
+          SH  RR  OF  OF  IF  IF  IF  IF  OF  OF  RR  SH
+        SH  RR  OF  OF  IF  IF  IF  OF  OF  RR  SH
+          -   RR  RR  OF  PC  IF  IF  PC  OF  RR  RR
+        SH  RR  OF  OF  OF  OF  OF  OF  OF  RR  SH
+        -   SH  RR  OF  OF  OF  OF  OF  OF  RR  SH
+          -   RR  RR  OF  OF  PC  OF  OF  RR  RR
+            SH  RR  RR  OF  OF  OF  OF  RR  RR  SH
+              SH  RR  RR  OF  OF  OF  RR  RR  SH
+                SH  RR  RR  RR  RR  RR  RR  SH
+                  SH  RR  RR  RR  RR  RR  SH
+                    SH  RR  RR  RR  RR  SH
+                      SH  RR  RR  RR  SH
+                        SH  SH  SH  SH
+                          SH  SH  SH
+      grid bounds:
+      symmetry: full
+      grid contents:
