@@ -1,12 +1,4 @@
-# This blueprints file specifies the assembly design information
-# for the MET-1000 at hot temperature conditions. The inputs for this
-# model are based on "Bencharks for Uncertainty Analysis in Modelling (UAM)
-# for Design, Operation, and Safety Analysis of SFRs" (see Section 3 of the report). 
-# The geometry inputs for this model assume end of equilibrium cycle, where 
-# fuel burnup expansion has occurred and the bond sodium within the fuel
-# has been push out of the active core region. Note that in this model, the 
-# wire-wraps are smeared into the cladding rather than into the sodium 
-# coolant so the wire-wrap is not explicitly modeled.
+# From "Advanced Burner Reactor 1000MWth Reference Concept" at https://publications.anl.gov/anlpubs/2017/04/134264.pdf
 nuclide flags:
   U234:
     burn: true
