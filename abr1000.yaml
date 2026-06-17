@@ -79,9 +79,9 @@ settings:
   zoningStrategy: manual
   OpenMCExePath: openmc
   openmcVerbosity: 7
-  nParticles: 3000
+  nParticles: 10000
   nBatches: 100
-  nInactiveBatches: 10
+  nInactiveBatches: 15
   groupStructure: "ANL33"
   tallyMeshDimension: [100,100,100]
   entropyMeshDimension: [8,8,8]

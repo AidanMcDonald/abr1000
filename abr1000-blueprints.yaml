@@ -285,20 +285,14 @@ nuclide flags:
 custom isotopics:
     Fuel:
         input format: mass fractions
-        density: 16.0
+        density: 11.79075 # 15.721*.75
         U235:   3.75449E-04
         U238:   7.60125E-01
-        NP237:  6.51048E-03
-        PU238:  3.01966E-03
-        PU239:  6.58500E-02
-        PU240:  3.18756E-02
-        PU241:  1.18104E-02
-        PU242:  9.63411E-03
-        AM241:  7.86895E-03
-        AM242M: 1.40850E-05
-        AM243:  2.20635E-03
-        CM244:  6.53272E-04
-        CM245:  5.70396E-05
+        PU238:  1.38877E-05
+        PU239:  1.30829E-01
+        PU240:  8.13667E-03
+        PU241:  4.92209E-04
+        PU242:  2.82431E-05
         ZR:     1.0E-01
 blocks:
 # Fuel Blocks - References
@@ -309,8 +303,8 @@ blocks:
         grid plate:
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 0.0
             mult: 1.0
             # The outer pitch is set to main a 30% SS316 to
@@ -320,61 +314,61 @@ blocks:
         intercoolant:
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 15.710
             mult: 1.0
             op: 16.142
         coolant:
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
     lower fuel reflector: &block_lower_fuel_reflector
         flags: lower reflector
         clad:
             shape: Circle
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.6430
             od: 0.755
             mult: 271
         reflector slug:
             shape: Circle
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.0
             mult: clad.mult
             od: 0.55685
         duct:
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 14.922
             op: 15.710
             mult: 1.0
         intercoolant:
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: duct.op
             op: 16.142
             mult: 1.0
         coolant:
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
     inner fuel a: &block_inner_fuel_burnup_region_1
         clad: &component_fuel_clad
             shape: Circle
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.6430
             od: 0.755
             mult: 271
@@ -390,34 +384,34 @@ blocks:
         wire: &component_fuel_wire
             shape: Helix
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.0
             helixDiameter: 0.88574
             od: 0.13074
-            mult: 217
+            mult: 271
             axialPitch: 15.0
         duct: &component_fuel_duct
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 14.922
             op: 15.710
             mult: 1.0
         intercoolant: &component_fuel_intercoolant
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: duct.op
             op: 16.142
             mult: 1.0
         coolant: &component_fuel_coolant
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
     inner fuel b: &block_inner_fuel_burnup_region_2
         clad: *component_fuel_clad
         fuel:
@@ -558,58 +552,58 @@ blocks:
         clad: &component_fuel_plenum_clad
             shape: Circle
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.6430
             od: 0.755
             mult: 271
         bond:
             shape: Circle
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.0
             od: clad.id
             mult: clad.mult
         wire: &component_fuel_plenum_wire
             shape: Helix
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.0
             helixDiameter: 0.88574
             od: 0.13074
-            mult: 217
+            mult: 271
             axialPitch: 15.0
         duct: &component_fuel_plenum_duct
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 14.922
             op: 15.710
             mult: 1.0
         intercoolant: &component_fuel_plenum_intercoolant
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: duct.op
             mult: 1.0
             op: 16.142
         coolant: &component_fuel_plenum_coolant
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
     fuel plenum: &block_fuel_plenum
         flags: plenum b
         clad: *component_fuel_plenum_clad
         gap:
             shape: Circle
             material: Void
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.0
             od: clad.id
             mult: clad.mult
@@ -621,8 +615,8 @@ blocks:
         structure:
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 0.0
             mult: 1.0
             # The outer pitch is set to main a 35.34% HT9 to
@@ -632,16 +626,16 @@ blocks:
         intercoolant:
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 15.710
             mult: 1.0
             op: 16.142
         coolant:
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
 # Radial Reflector Blocks - References
 #   - Table 13: Parameters for Radial Reflector Subassembly of ABR Metallic Core
 #   - Table 16: Volume Fractions of ABR Metallic Core (%)
@@ -649,8 +643,8 @@ blocks:
         structure:
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 0.0
             mult: 1.0
             # The outer pitch is set to main a 35.34% HT9 to
@@ -660,46 +654,46 @@ blocks:
         intercoolant:
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 15.710
             mult: 1.0
             op: 16.142
         coolant:
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
     radial reflector: &block_radial_reflector
         slug:
             shape: Circle
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.0
             od: 1.541
             mult: 91
         duct:
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 14.922
             op: 15.710
             mult: 1.0
         intercoolant:
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: duct.op
             op: 16.142
             mult: 1.0
         coolant:
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
 # Radial Shield Blocks - References
 #   - Table 14: Parameters for Shielding Subassembly of ABR Metallic Core
 #   - Table 16: Volume Fractions of ABR Metallic Core (%)
@@ -707,48 +701,48 @@ blocks:
         clad:
             shape: Circle
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 3.087
             od: 3.337
             mult: 19
         shield:
             shape: Circle
             material: B4C
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.0
             od: 2.553
             mult: clad.mult
         bond:
             shape: Circle
             material: Void # He
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: shield.od
             od: clad.id
             mult: clad.mult
         duct:
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 14.922
             op: 15.710
             mult: 1.0
         intercoolant:
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: duct.op
             op: 16.142
             mult: 1.0
         coolant:
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
 # Control Blocks - References
 #   - Table 15: Parameters for Control Assembly of ABR Metallic Core
 #   - Table 16: Volume Fractions of ABR Metallic Core (%)
@@ -757,70 +751,70 @@ blocks:
         clad:
             shape: Circle
             material: B4C
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 4.618
             od: 4.688
             mult: 7
         control:
             shape: Circle
             material: B4C
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: 0.0
             od: 4.193
             mult: clad.mult
         bond:
             shape: Circle
             material: Void # He
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             id: control.od
             od: clad.id
             mult: clad.mult
         duct:
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 14.922
             op: 15.710
             mult: 1.0
         intercoolant:
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: duct.op
             op: 16.142
             mult: 1.0
         coolant:
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
     duct: &block_duct
         duct:
             shape: Hexagon
             material: HT9
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: 14.922
             op: 15.710
             mult: 1.0
         intercoolant:
             shape: Hexagon
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
             ip: duct.op
             op: 16.142
             mult: 1.0
         coolant:
             shape: DerivedShape
             material: Sodium
-            Tinput: 432.5
-            Thot: 432.5
+            Tinput: 380
+            Thot: 380
 assemblies:
     inner fuel:
         specifier: IF
@@ -982,7 +976,7 @@ assemblies:
         height: &primary_control_heights
             - 35.56
             - 124.46
-            - 235.82
+            - 67.28
             - 10.84375
             - 10.84375
             - 10.84375
@@ -991,7 +985,7 @@ assemblies:
             - 10.84375
             - 10.84375
             - 10.84375
-            - 2.01
+            - 170.55
         axial mesh points: &primary_control_axial_mesh_points
             - 3
             - 12
